@@ -1,0 +1,148 @@
+:root {
+  /* Colores base */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  --color-white: #ffffff;
+  --color_black: #000000;
+  --color-gray-light: #f8fafc;
+  --color-gray: #94a3b8;
+  --color-dark: #1e293b;
+
+  /* Tipografía */
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --line-height: 1.6;
+
+  /* Espaciados */
+  --spacing: 1rem;
+  --border-radius: 8px;
+}
+
+/* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  color: var(--color-dark);
+  background-color: var(--color-gray-light);
+  padding: var(--spacing);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary-dark);
+  margin-bottom: calc(var(--spacing) / 2);
+  font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+/* Párrafos y texto */
+p {
+  margin-bottom: var(--spacing);
+}
+
+/* Enlaces */
+a {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Listas */
+ul, ol {
+  margin-bottom: var(--spacing);
+  padding-left: var(--spacing);
+}
+
+li {
+  margin-bottom: calc(var(--spacing) / 2);
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  display: block;
+}
+
+/* Botones (estilo para elementos <button> e <input type="button">) */
+button, input[type="button"], input[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Formularios */
+input, textarea, select {
+  width: 100%;
+  padding: calc(var(--spacing) / 2);
+  margin-bottom: var(--spacing);
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing);
+}
+
+th, td {
+  padding: calc(var(--spacing) / 2);
+  border: 1px solid var(--color-gray);
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Bloques de código */
+code, pre {
+  font-family: monospace;
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+pre {
+  padding: var(--spacing);
+  overflow-x: auto;
+  margin-bottom: var(--spacing);
+}
+
+/* Separador horizontal */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-gray);
+  margin: var(--spacing) 0;
+}

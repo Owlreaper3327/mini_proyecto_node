@@ -1,0 +1,28 @@
+<%-include("partials/header", {tituloWeb});%>
+
+<h1>Crear Nota</h1>
+
+<div>
+  <form action="/notas/crear" method="post">
+    <input
+    type="text"
+    name="titulo"
+    placeholder="Escribir título"
+    required
+    >
+    <br>
+    <br>
+    <input
+    type="text"
+    name="contenido"
+    placeholder="Escribe"
+    size="65px"
+    >
+    <button type="submit">Crear</button>
+
+  </form>
+</div>
+
+<button><a href="/notas">Volver</a></button>
+
+<%-include("partials/footer");%>

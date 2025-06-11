@@ -1,0 +1,32 @@
+<%-include("partials/header", {tituloWeb});%>
+
+<h1>Lista de notas</h1>
+<div style="width: 50%;">
+  <table style="width: 100%; margin-bottom: 20px;" align="left">
+    <tr>
+      <th scope="col" align="left">Titulo</th>
+      <th scope="col" align="left">Fecha</th>
+      <th scope="col" align="left">Acción</th>
+      <th scope="col" align="left">Acción</th>
+    </tr>
+    <% if(objetos.length > 0) {%>
+      <% objetos.forEach(objeto => {%>
+      <tr>
+        <th scope="row" align = "left"><%=objeto.titulo; %></th>
+        <td><%= objeto.fecha.toLocaleDateString("es-ES", {day: "2-digit", month: "2-digit", year: "numeric"}); %></td>
+        <td><a href="/notas/editar/<%=objeto.id%>">Editar</a></td>
+        <td><a href="/notas/leer/<%=objeto.id%>">Detalles</a></td>
+      </tr>
+      <%});%>
+    <%}%>
+    
+  </table>
+  <div style="margin-top: 20px;">
+    <button style="padding: 10px 20px;"><a href="/notas/crear">Crear Nueva</a></button>
+    <button style="padding: 10px 20px;"><a href="/">Volver</a></button>
+
+  </div>
+      
+</div>
+
+<%-include("partials/footer");%>

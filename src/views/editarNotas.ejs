@@ -1,0 +1,33 @@
+<%-include("partials/header", {tituloWeb});%>
+
+<h1>Editar Notas</h1>
+
+<div>
+  <form action="/notas/editar/<%=objeto.id%>" method="post" id="f1">
+
+    <input
+    type="text"
+    name="titulo"
+    value="<%=objeto.titulo%>"
+    height="15px"
+    required
+    >
+    <br>
+    <br>
+    <input
+    id="a"
+    class="a"
+    type="text"
+    name="contenido"
+    value="<%=objeto.contenido%>"
+    size="75px"
+    >
+    <button type="submit">Submit</button>
+    <button type="submit" formaction="/notas/eliminar/<%=objeto.id%>" formmethod="post">Eliminar</button>
+
+  </form>
+</div>
+
+<button><a href="/notas">Volver</a></button>
+
+<%-include("partials/header");%>

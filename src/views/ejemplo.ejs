@@ -1,0 +1,31 @@
+<%-include("partials/header", {tituloWeb});%>
+
+<h1>Ejemplos listados</h1>
+<div>
+  <table style="width: 75%; margin-bottom: 20px;" align="left">
+    <tr>
+      <th scope="col" align="left">Nombre</th>
+      <th scope="col" align="left">Descripción</th>
+      <th scope="col" align="left">Fecha</th>
+      <th scope="col" align="left">Acción</th>
+    </tr>
+    <% if(objetos.length > 0) {%>
+      <% objetos.forEach(objeto => {%>
+      <tr>
+        <th scope="row" align = "left"><%=objeto.nombre_ejemplo; %></th>
+        <td><%= objeto.descripcion_ejemplo;%></td>
+        <td><%= objeto.fecha.toLocaleDateString("es-ES", {day: "2-digit", month: "2-digit", year: "numeric"}); %></td>
+        <td><button title="Todavía no me aprietes we, no hago nada">Editar(En construcción)</button></td>
+      </tr>
+      <%});%>
+    <%}%>
+      
+  </table>
+<div>
+  <h2>
+    <a href="/">Volver</a>
+  </h2>
+</div>
+</div>
+
+<%-include("partials/footer");%>
